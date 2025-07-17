@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const $form = document.querySelector("form");
 const $firstName = document.querySelector("#firstName");
 const $lastName = document.querySelector("#lastName");
 const $age = document.querySelector("#age");
@@ -9,4 +9,4 @@ const person = {
   age: $age.value,
 };
 
-form.setAttribute("data-person", JSON.stringify(person));
+$form.setAttribute("data-person", JSON.stringify(person));
