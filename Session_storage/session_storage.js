@@ -15,12 +15,15 @@ function creaPersona() {
   sessionStorage.setItem("person", JSON.stringify(persona));
   let personaJ = JSON.parse(sessionStorage.getItem("person"));
   $titolo.innerHTML = personaJ.firstname;
+  $email.value = "";
+  $firstname.value = "";
+  $lastname.value = "";
 }
-let personaSalvata = sessionStorage.getItem("person");
 
 window.addEventListener("DOMContentLoaded", () => {
-  let personaJson = JSON.parse(personaSalvata);
-  if (personaJson) {
+  let personaSalvata = sessionStorage.getItem("person");
+  if (personaSalvata) {
+    let personaJson = JSON.parse(personaSalvata);
     $titolo.innerHTML = personaJson.firstname;
   }
 });
